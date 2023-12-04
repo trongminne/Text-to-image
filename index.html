@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Trọng Min - Ai Image Generator</title>
+    <!-- @* Hộp thoại thông báo *@ -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+</head>
+
+<body>
+    <video autoplay loop muted>
+        <source src="./bg.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="container">
+        <h1>Tạo ảnh bằng AI</h1>
+        <!-- <p>Hãy mô tả chi tiết hình ảnh bạn muốn tạo: "lá cờ tổ quốc việt nam đang bay phấp phới"</p> -->
+        <form class="gen-form">
+            <input type="text" id="user-prompt" , placeholder="Nhập mô tả bằng tiếng anh vào đây..." autocomplete="off">
+            <button type="button" id="generate">Tạo</button>
+        </form>
+
+        <div class="result">
+            <div id="loading">Đang tạo...</div>
+            <div id="image-grid"></div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Hiển thị hộp thoại
+        Swal.fire({
+          icon: "info",
+          text: "Hãy nhập bằng tiếng anh để chắc chắn rằng hình ảnh của bạn được tạo chính xác nhất!",
+          showConfirmButton: false  // Tắt nút OK
+        });
+      </script>
+      
+
+</body>
+
+</html>
